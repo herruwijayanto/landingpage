@@ -1,1 +1,1031 @@
 
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Herru Wijayanto - Digital Marketer, Creative Content Specialist, Graphic Design, Video Editing, dan AI.">
+  <title>Herru Wijayanto | Digital Marketer</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #080d18;
+      --panel: #111c2e;
+      --accent: #62e6c5;
+      --blue: #6ea8ff;
+      --text: #f4f7fb;
+      --muted: #aab6ca;
+      --line: rgba(255,255,255,.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 85px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, .navbar-brand {
+      font-family: "Space Grotesk", sans-serif;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .accent {
+      color: var(--accent);
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .section {
+      padding: 100px 0;
+    }
+
+    .section-label {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      letter-spacing: -1.5px;
+      line-height: 1.2;
+    }
+
+    /* NAVBAR */
+
+    .navbar {
+      background: rgba(8,13,24,.92);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      color: white;
+      font-size: 1.4rem;
+    }
+
+    .brand-icon {
+      display: inline-grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      background: var(--accent);
+      color: #07121c;
+      border-radius: 12px;
+      margin-right: 8px;
+    }
+
+    .nav-link {
+      color: #c5cede !important;
+      margin: 0 5px;
+    }
+
+    .nav-link:hover {
+      color: var(--accent) !important;
+    }
+
+    /* BUTTON */
+
+    .btn-accent {
+      background: var(--accent);
+      color: #07121c;
+      border: 1px solid var(--accent);
+      border-radius: 50px;
+      padding: 12px 23px;
+      font-weight: 700;
+      transition: .25s;
+    }
+
+    .btn-accent:hover {
+      background: transparent;
+      color: var(--accent);
+      transform: translateY(-3px);
+    }
+
+    .btn-outline-custom {
+      border: 1px solid rgba(255,255,255,.3);
+      color: white;
+      border-radius: 50px;
+      padding: 12px 23px;
+      transition: .25s;
+    }
+
+    .btn-outline-custom:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 100vh;
+      padding: 145px 0 85px;
+      display: flex;
+      align-items: center;
+      background:
+        radial-gradient(circle at 85% 15%, rgba(76,121,255,.15), transparent 30rem),
+        radial-gradient(circle at 10% 70%, rgba(98,230,197,.07), transparent 30rem);
+    }
+
+    .status {
+      display: inline-block;
+      border: 1px solid var(--line);
+      border-radius: 50px;
+      padding: 8px 15px;
+      color: #d6e0ee;
+      font-size: 13px;
+      background: rgba(255,255,255,.03);
+    }
+
+    .status-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      margin-right: 8px;
+      box-shadow: 0 0 10px var(--accent);
+    }
+
+    .hero h1 {
+      font-size: clamp(3.2rem, 7vw, 5.8rem);
+      line-height: 1;
+      letter-spacing: -4px;
+      font-weight: 700;
+      margin: 28px 0;
+    }
+
+    .outline-text {
+      color: transparent;
+      -webkit-text-stroke: 1px white;
+    }
+
+    .hero-description {
+      color: var(--muted);
+      font-size: 1.08rem;
+      max-width: 600px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 25px 0 30px;
+    }
+
+    .tag {
+      border: 1px solid var(--line);
+      border-radius: 50px;
+      padding: 7px 13px;
+      color: #cbd6e7;
+      font-size: 13px;
+    }
+
+    /* HERO VISUAL */
+
+    .hero-visual {
+      min-height: 440px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .orbit {
+      width: 370px;
+      height: 370px;
+      max-width: 100%;
+      border: 1px solid rgba(98,230,197,.3);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      box-shadow: 0 0 0 35px rgba(98,230,197,.025),
+                  0 0 0 70px rgba(98,230,197,.015);
+    }
+
+    .profile-card {
+      width: 225px;
+      padding: 30px 15px;
+      text-align: center;
+      border: 1px solid var(--line);
+      border-radius: 25px;
+      background: linear-gradient(145deg, #192943, #0b1424);
+      box-shadow: 0 20px 60px rgba(0,0,0,.4);
+      z-index: 2;
+    }
+
+    .avatar {
+      width: 85px;
+      height: 85px;
+      border-radius: 25px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--accent), var(--blue));
+      color: #07121c;
+      font-size: 30px;
+      font-weight: 700;
+      margin: 0 auto 18px;
+    }
+
+    .float-icon {
+      position: absolute;
+      width: 55px;
+      height: 55px;
+      border-radius: 17px;
+      background: #142239;
+      border: 1px solid var(--line);
+      color: var(--accent);
+      display: grid;
+      place-items: center;
+      font-size: 24px;
+    }
+
+    .icon-one { top: 10%; left: 8%; }
+    .icon-two { top: 15%; right: 5%; color: var(--blue); }
+    .icon-three { bottom: 12%; left: 5%; color: #ffd18a; }
+    .icon-four { bottom: 8%; right: 10%; color: #dca5ff; }
+
+    /* PANELS */
+
+    .panel {
+      background: linear-gradient(145deg, #121e31, #0d1626);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+    }
+
+    .about-panel {
+      padding: 35px;
+    }
+
+    .quote {
+      border-left: 3px solid var(--accent);
+      padding: 18px;
+      background: rgba(98,230,197,.06);
+      border-radius: 0 12px 12px 0;
+      color: #dce5f0;
+    }
+
+    /* SKILLS */
+
+    .skills-section {
+      background: rgba(255,255,255,.018);
+      border-top: 1px solid rgba(255,255,255,.05);
+      border-bottom: 1px solid rgba(255,255,255,.05);
+    }
+
+    .skill-card {
+      height: 100%;
+      padding: 28px;
+      transition: .3s;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-7px);
+      border-color: rgba(98,230,197,.5);
+    }
+
+    .skill-icon {
+      width: 55px;
+      height: 55px;
+      border-radius: 17px;
+      display: grid;
+      place-items: center;
+      background: rgba(98,230,197,.1);
+      color: var(--accent);
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+
+    .skill-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .tool-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 18px;
+    }
+
+    .tool-tags span {
+      font-size: 12px;
+      color: #d0daea;
+      padding: 5px 10px;
+      border-radius: 7px;
+      background: rgba(255,255,255,.06);
+    }
+
+    /* PORTFOLIO */
+
+    .portfolio-card {
+      height: 100%;
+      overflow: hidden;
+      transition: .3s;
+    }
+
+    .portfolio-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(98,230,197,.4);
+    }
+
+    .portfolio-art {
+      height: 210px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .art-one {
+      background: radial-gradient(circle at top right, #285d62, #14223b);
+    }
+
+    .art-two {
+      background: radial-gradient(circle at bottom left, #6c3c72, #201d39);
+    }
+
+    .art-three {
+      background: radial-gradient(circle at top right, #254f7d, #102b31);
+    }
+
+    .mockup {
+      width: 85%;
+      padding: 20px;
+      border-radius: 15px;
+      background: rgba(5,12,23,.78);
+      border: 1px solid rgba(255,255,255,.2);
+    }
+
+    .mock-line {
+      height: 7px;
+      border-radius: 5px;
+      background: rgba(255,255,255,.2);
+      margin-top: 10px;
+    }
+
+    .mock-line.green {
+      width: 70%;
+      background: var(--accent);
+    }
+
+    .mock-line.short {
+      width: 45%;
+    }
+
+    .play-button {
+      width: 55px;
+      height: 55px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #07121c;
+      font-size: 23px;
+      margin: 10px auto;
+    }
+
+    .portfolio-content {
+      padding: 24px;
+    }
+
+    .portfolio-content p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* WORK PROCESS */
+
+    .process-item {
+      display: flex;
+      gap: 18px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .process-item:last-child {
+      border-bottom: none;
+    }
+
+    .process-number {
+      flex: 0 0 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(98,230,197,.4);
+      border-radius: 13px;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    /* CONTACT */
+
+    .contact-panel {
+      padding: clamp(25px, 5vw, 55px);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 25px;
+      color: white;
+    }
+
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      border-radius: 15px;
+      background: rgba(98,230,197,.1);
+      color: var(--accent);
+      font-size: 24px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 25px 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .back-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 45px;
+      height: 45px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background: var(--accent);
+      color: #07121c;
+      z-index: 99;
+      box-shadow: 0 8px 25px rgba(0,0,0,.3);
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 991px) {
+      .hero {
+        padding-top: 130px;
+      }
+
+      .hero-visual {
+        min-height: 400px;
+        margin-top: 25px;
+      }
+
+      .section {
+        padding: 75px 0;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .hero h1 {
+        font-size: 3.2rem;
+        letter-spacing: -2px;
+      }
+
+      .hero-visual {
+        min-height: 340px;
+      }
+
+      .orbit {
+        width: 300px;
+        height: 300px;
+      }
+
+      .profile-card {
+        width: 190px;
+        padding: 22px 10px;
+      }
+
+      .avatar {
+        width: 70px;
+        height: 70px;
+      }
+
+      .float-icon {
+        width: 43px;
+        height: 43px;
+        font-size: 19px;
+      }
+
+      .about-panel {
+        padding: 23px;
+      }
+
+      .section {
+        padding: 65px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#home">
+      <span class="brand-icon">H</span>
+      herru<span class="accent">.</span>
+    </a>
+
+    <button class="navbar-toggler shadow-none" type="button"
+      data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+      aria-controls="navbarMenu" aria-expanded="false"
+      aria-label="Buka menu navigasi">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center py-3 py-lg-0">
+        <li class="nav-item"><a class="nav-link" href="#home">Beranda</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Keahlian</a></li>
+        <li class="nav-item"><a class="nav-link" href="#portfolio">Portofolio</a></li>
+        <li class="nav-item ms-lg-3">
+          <a class="btn btn-accent btn-sm mt-2 mt-lg-0"
+             href="https://wa.me/6281313127355" target="_blank" rel="noopener">
+            <i class="bi bi-whatsapp me-1"></i> Hubungi Saya
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="home">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-7">
+        <div class="status">
+          <span class="status-dot"></span>
+          Terbuka untuk peluang dan kolaborasi
+        </div>
+
+        <p class="section-label mt-4">Digital Marketing · Creative Technology</p>
+
+        <h1>Herru<br><span class="outline-text">Wijayanto.</span></h1>
+
+        <h2 class="h4 fw-bold mb-3">
+          Digital Marketer <span class="accent">&</span>
+          Creative Content Specialist
+        </h2>
+
+        <p class="hero-description">
+          Membantu bisnis membangun identitas merek, menyiapkan pemasaran
+          digital, dan menghadirkan konten kreatif melalui desain, video,
+          media sosial, serta teknologi AI.
+        </p>
+
+        <div class="tags">
+          <span class="tag"><i class="bi bi-graph-up me-1"></i> Digital Marketing</span>
+          <span class="tag"><i class="bi bi-palette me-1"></i> Graphic Design</span>
+          <span class="tag"><i class="bi bi-camera-reels me-1"></i> Video Editing</span>
+          <span class="tag"><i class="bi bi-stars me-1"></i> AI Tools</span>
+        </div>
+
+        <div class="d-flex flex-wrap gap-3">
+          <a class="btn btn-accent"
+             href="https://wa.me/6281313127355?text=Halo%20Herru%2C%20saya%20ingin%20berdiskusi%20tentang%20peluang%20kerja%20sama."
+             target="_blank" rel="noopener">
+            <i class="bi bi-whatsapp me-2"></i>Diskusi via WhatsApp
+          </a>
+
+          <a class="btn btn-outline-custom" href="#portfolio">
+            Lihat Portofolio <i class="bi bi-arrow-down-right ms-2"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="hero-visual">
+          <div class="orbit">
+            <div class="profile-card">
+              <div class="avatar">HW</div>
+              <h3 class="h5 fw-bold">Herru Wijayanto</h3>
+              <p class="muted small mb-2">Digital · Design · AI</p>
+              <span class="accent small">
+                <i class="bi bi-circle-fill me-1" style="font-size:7px"></i>
+                Creative Mindset
+              </span>
+            </div>
+
+            <div class="float-icon icon-one"><i class="bi bi-graph-up-arrow"></i></div>
+            <div class="float-icon icon-two"><i class="bi bi-bezier2"></i></div>
+            <div class="float-icon icon-three"><i class="bi bi-play-btn"></i></div>
+            <div class="float-icon icon-four"><i class="bi bi-stars"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="row g-4 align-items-stretch">
+      <div class="col-lg-4">
+        <p class="section-label">Tentang Saya</p>
+        <h2 class="section-title">
+          Kreativitas bertemu <span class="accent">strategi digital.</span>
+        </h2>
+        <p class="muted mt-4">
+          Menciptakan materi digital yang menarik secara visual dan
+          mendukung kebutuhan komunikasi serta pemasaran.
+        </p>
+      </div>
+
+      <div class="col-lg-8">
+        <div class="panel about-panel h-100">
+          <p class="muted">
+            Perkenalkan, saya <strong class="text-white">Herru Wijayanto</strong>,
+            seorang profesional di bidang digital marketing dengan minat
+            dan kemampuan dalam pemasaran produk, desain grafis, pengelolaan
+            media sosial, video editing, serta pemanfaatan teknologi AI.
+          </p>
+
+          <p class="muted">
+            Saya memiliki kemampuan dalam mempersiapkan kebutuhan pemasaran
+            digital, mulai dari perancangan identitas visual seperti logo,
+            pembuatan materi promosi, hingga persiapan konten untuk berbagai
+            platform media sosial.
+          </p>
+
+          <p class="muted">
+            Saya terbiasa menggunakan Canva, CapCut, ChatGPT, Grok, dan Gemini
+            untuk mendukung proses kreatif, pengembangan ide, serta produksi
+            konten digital.
+          </p>
+
+          <p class="muted">
+            Saya mampu bekerja secara mandiri maupun dalam tim, cepat
+            mempelajari teknologi baru, serta berkomitmen menghasilkan
+            pekerjaan berkualitas dan tepat waktu. Saya siap memberikan
+            kontribusi positif melalui kreativitas, kemampuan teknis,
+            dan semangat untuk terus berkembang.
+          </p>
+
+          <div class="quote mt-4">
+            <i class="bi bi-quote accent fs-4 me-2"></i>
+            Ide yang baik menjadi lebih kuat ketika didukung strategi,
+            visual yang tepat, dan eksekusi yang konsisten.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="section skills-section" id="skills">
+  <div class="container">
+    <div class="mb-5">
+      <p class="section-label">Keahlian Utama</p>
+      <h2 class="section-title">
+        Skill untuk kebutuhan <span class="accent">digital masa kini.</span>
+      </h2>
+      <p class="muted mt-3">
+        Perpaduan kreativitas, platform digital, dan teknologi untuk mendukung brand.
+      </p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-xl-4">
+        <div class="panel skill-card">
+          <div class="skill-icon"><i class="bi bi-graph-up-arrow"></i></div>
+          <h3 class="h5 fw-bold">Digital Marketing</h3>
+          <p>Persiapan pemasaran produk, materi promosi digital, pengembangan identitas merek, dan dukungan strategi pemasaran.</p>
+          <div class="tool-tags">
+            <span>Product Promotion</span><span>Brand Identity</span><span>Copywriting</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-xl-4">
+        <div class="panel skill-card">
+          <div class="skill-icon"><i class="bi bi-share"></i></div>
+          <h3 class="h5 fw-bold">Social Media</h3>
+          <p>Persiapan dan pengembangan konten untuk membangun kehadiran brand dan menjangkau audiens.</p>
+          <div class="tool-tags">
+            <span>Meta</span><span>YouTube</span><span>TikTok</span><span>Instagram</span><span>Facebook</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-xl-4">
+        <div class="panel skill-card">
+          <div class="skill-icon"><i class="bi bi-palette2"></i></div>
+          <h3 class="h5 fw-bold">Graphic Design</h3>
+          <p>Pembuatan desain logo, visual branding, materi promosi, dan konten grafis sesuai karakter merek.</p>
+          <div class="tool-tags">
+            <span>Canva</span><span>Logo Design</span><span>Promotional Design</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-xl-4">
+        <div class="panel skill-card">
+          <div class="skill-icon"><i class="bi bi-camera-reels"></i></div>
+          <h3 class="h5 fw-bold">Video Editing</h3>
+          <p>Menyunting video promosi, konten pendek, Reels, TikTok, dan video media sosial yang komunikatif.</p>
+          <div class="tool-tags">
+            <span>CapCut</span><span>Reels</span><span>Short Video</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-xl-4">
+        <div class="panel skill-card">
+          <div class="skill-icon"><i class="bi bi-stars"></i></div>
+          <h3 class="h5 fw-bold">AI & Creative Tools</h3>
+          <p>Pemanfaatan AI untuk riset, brainstorming, copywriting, eksplorasi ide, dan mendukung proses kreatif.</p>
+          <div class="tool-tags">
+            <span>ChatGPT</span><span>Grok</span><span>Gemini</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-xl-4">
+        <div class="panel skill-card">
+          <div class="skill-icon"><i class="bi bi-people"></i></div>
+          <h3 class="h5 fw-bold">Kolaborasi & Adaptasi</h3>
+          <p>Mampu bekerja mandiri maupun dalam tim, terbuka terhadap masukan, dan berorientasi pada hasil berkualitas.</p>
+          <div class="tool-tags">
+            <span>Teamwork</span><span>Problem Solving</span><span>Continuous Learning</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="section" id="portfolio">
+  <div class="container">
+    <p class="section-label">Portofolio</p>
+    <h2 class="section-title">
+      Ide kreatif, dikemas <span class="accent">secara visual.</span>
+    </h2>
+    <p class="muted mt-3 mb-5">
+      Berikut contoh kategori karya. Ganti dengan hasil karya asli Anda.
+    </p>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="panel portfolio-card">
+          <div class="portfolio-art art-one">
+            <div class="mockup">
+              <span class="accent fw-bold">BRAND / 01</span>
+              <div class="display-6 fw-bold mt-3">
+                Build<br><span class="accent">Identity.</span>
+              </div>
+              <div class="mock-line green"></div>
+              <div class="mock-line short"></div>
+            </div>
+          </div>
+          <div class="portfolio-content">
+            <p class="section-label mb-2">Branding</p>
+            <h3 class="h5 fw-bold">Desain Logo & Identitas Brand</h3>
+            <p>Konsep visual untuk membangun identitas merek yang kuat, konsisten, dan mudah dikenali.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="panel portfolio-card">
+          <div class="portfolio-art art-two">
+            <div class="mockup">
+              <span class="fw-bold">SOCIAL / 02</span>
+              <div class="row g-2 mt-3">
+                <div class="col-7">
+                  <div style="height:85px;border-radius:9px;background:linear-gradient(140deg,#eaa66f,#744c9d)"></div>
+                </div>
+                <div class="col-5">
+                  <div style="height:85px;border-radius:9px;background:linear-gradient(140deg,#66e4c3,#243e6a)"></div>
+                </div>
+              </div>
+              <div class="mock-line"></div>
+            </div>
+          </div>
+          <div class="portfolio-content">
+            <p class="section-label mb-2">Social Media</p>
+            <h3 class="h5 fw-bold">Konten Media Sosial</h3>
+            <p>Materi feed, story, dan promosi yang dirancang sesuai karakter brand dan kebutuhan audiens.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="panel portfolio-card">
+          <div class="portfolio-art art-three">
+            <div class="mockup text-center">
+              <span class="fw-bold">VIDEO / 03</span>
+              <div class="play-button"><i class="bi bi-play-fill"></i></div>
+              <div class="mock-line green"></div>
+              <div class="mock-line short"></div>
+            </div>
+          </div>
+          <div class="portfolio-content">
+            <p class="section-label mb-2">Video Content</p>
+            <h3 class="h5 fw-bold">Video Promosi & Editing</h3>
+            <p>Video pendek dan konten promosi yang disusun agar pesan tersampaikan dengan jelas dan menarik.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="muted small mt-4">
+      <i class="bi bi-info-circle me-1"></i>
+      Visual di atas adalah mockup ilustratif. Silakan ganti dengan hasil karya Anda sendiri.
+    </p>
+  </div>
+</section>
+
+<!-- WORK PROCESS -->
+<section class="section skills-section">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-5">
+        <p class="section-label">Cara Saya Bekerja</p>
+        <h2 class="section-title">
+          Proses terarah, hasil <span class="accent">bermakna.</span>
+        </h2>
+        <p class="muted mt-4">
+          Setiap proyek dimulai dengan memahami tujuan, menyusun ide,
+          lalu mengembangkan materi yang sesuai dengan kebutuhan.
+        </p>
+        <a class="btn btn-outline-custom mt-3" href="#contact">
+          Diskusikan kebutuhan Anda <i class="bi bi-arrow-up-right ms-2"></i>
+        </a>
+      </div>
+
+      <div class="col-lg-7">
+        <div class="panel p-4 p-lg-5">
+          <div class="process-item">
+            <div class="process-number">01</div>
+            <div>
+              <h3 class="h5 fw-bold">Pahami kebutuhan</h3>
+              <p class="muted mb-0">Memahami tujuan, audiens, karakter brand, dan pesan yang ingin disampaikan.</p>
+            </div>
+          </div>
+
+          <div class="process-item">
+            <div class="process-number">02</div>
+            <div>
+              <h3 class="h5 fw-bold">Susun konsep</h3>
+              <p class="muted mb-0">Mengembangkan ide, arah visual, dan pendekatan konten sesuai kebutuhan proyek.</p>
+            </div>
+          </div>
+
+          <div class="process-item">
+            <div class="process-number">03</div>
+            <div>
+              <h3 class="h5 fw-bold">Produksi & evaluasi</h3>
+              <p class="muted mb-0">Membuat materi digital, meninjau hasil, dan menyesuaikan detail berdasarkan masukan.</p>
+            </div>
+          </div>
+
+          <div class="process-item">
+            <div class="process-number">04</div>
+            <div>
+              <h3 class="h5 fw-bold">Selesaikan pekerjaan</h3>
+              <p class="muted mb-0">Menjaga kualitas, komunikasi, dan ketepatan waktu dalam penyelesaian pekerjaan.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="panel contact-panel">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7">
+          <p class="section-label">Hubungi Saya</p>
+          <h2 class="section-title">
+            Punya ide? Mari kita <span class="accent">wujudkan bersama.</span>
+          </h2>
+          <p class="muted mt-4 mb-4">
+            Terbuka untuk peluang kerja, proyek digital marketing,
+            desain grafis, konten media sosial, video editing,
+            dan kolaborasi kreatif.
+          </p>
+
+          <a class="btn btn-accent btn-lg"
+             href="https://wa.me/6281313127355?text=Halo%20Herru%20Wijayanto%2C%20saya%20ingin%20berdiskusi%20tentang%20peluang%20kerja%20sama."
+             target="_blank" rel="noopener">
+            <i class="bi bi-whatsapp me-2"></i>Chat Saya di WhatsApp
+          </a>
+        </div>
+
+        <div class="col-lg-5">
+          <a class="contact-item" href="https://wa.me/6281313127355"
+             target="_blank" rel="noopener">
+            <span class="contact-icon"><i class="bi bi-whatsapp"></i></span>
+            <span>
+              <span class="muted small d-block">WhatsApp</span>
+              <strong>0813 1312 7355</strong>
+            </span>
+          </a>
+
+          <div class="contact-item">
+            <span class="contact-icon"><i class="bi bi-person-workspace"></i></span>
+            <span>
+              <span class="muted small d-block">Fokus Profesional</span>
+              <strong>Digital Marketing & Creative Content</strong>
+            </span>
+          </div>
+
+          <p class="muted small">Klik tombol WhatsApp untuk memulai percakapan langsung.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+    <p class="mb-0">
+      © <span id="year"></span> <strong class="text-white">Herru Wijayanto</strong>.
+      All rights reserved.
+    </p>
+    <a href="#home" class="accent">
+      Kembali ke atas <i class="bi bi-arrow-up"></i>
+    </a>
+  </div>
+</footer>
+
+<a href="#home" class="back-top" aria-label="Kembali ke atas">
+  <i class="bi bi-arrow-up"></i>
+</a>
+
+<!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  // Tahun otomatis di bagian footer
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Menutup menu mobile setelah tautan diklik
+  document.querySelectorAll("#navbarMenu .nav-link").forEach(function(link) {
+    link.addEventListener("click", function() {
+      const menu = document.getElementById("navbarMenu");
+
+      if (menu.classList.contains("show")) {
+        bootstrap.Collapse.getOrCreateInstance(menu).hide();
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
+
